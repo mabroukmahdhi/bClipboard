@@ -8,13 +8,13 @@ namespace bClipboard
 {
     internal partial class ClipboardService
     {
-        public async ValueTask CopyTextToClipboard(string text)
+        public async ValueTask CopyToClipboardAsync(string text)
         {
             var module = await moduleTask.Value;
             await module.InvokeVoidAsync("copyTextToClipboard", text);
         }
 
-        public async ValueTask<string> ReadTextFromClipboard()
+        public async ValueTask<string> ReadFromClipboardAsync()
         {
             var module = await moduleTask.Value;
             return await module.InvokeAsync<string>("readTextFromClipboard");

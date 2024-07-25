@@ -6,7 +6,7 @@ namespace bClipboard
 {
     public interface IClipboardService
     {
-        ValueTask CopyTextToClipboard(string text);
-        ValueTask<string> ReadTextFromClipboard();
+        ValueTask CopyToClipboardAsync(string text);
+        ValueTask<string> ReadFromClipboardAsync();
     }
 }

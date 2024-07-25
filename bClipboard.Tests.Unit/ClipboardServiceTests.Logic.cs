@@ -21,7 +21,7 @@ namespace bClipboard.Tests.Unit
             var expectedText = randomText;
 
             // when
-            await clipboardService.CopyTextToClipboard(inputText);
+            await clipboardService.CopyToClipboardAsync(inputText);
 
             // Then
             var invocation = this.JSInterop.VerifyInvoke("copyTextToClipboard");
@@ -42,7 +42,7 @@ namespace bClipboard.Tests.Unit
                 .SetResult(outputText);
 
             // when
-            var actualText = await clipboardService.ReadTextFromClipboard();
+            var actualText = await clipboardService.ReadFromClipboardAsync();
 
             // Then
             actualText.Should().Be(expectedText);
