@@ -2,13 +2,10 @@
 // Copyright (c) All Sweet Hearted Engineers.
 // ---------------------------------------------------------------
 
-using System.Linq;
 using System.Threading.Tasks;
 using Bunit;
 using FluentAssertions;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.JSInterop;
-using Moq;
 
 namespace bClipboard.Tests.Unit
 {
@@ -30,6 +27,25 @@ namespace bClipboard.Tests.Unit
             var invocation = this.JSInterop.VerifyInvoke("copyTextToClipboard");
             invocation.Arguments.Count.Should().Be(1);
             invocation.Arguments.Should().Contain(expectedText);
+        }
+
+        [Fact]
+        public async Task ShouldReadTextFromClipboard()
+        {
+            // given
+            var clipboardService = Services.GetRequiredService<IClipboardService>();
+            var randomText = GetRandomString();
+            var outputText = randomText;
+            var expectedText = randomText;
+
+            this.JSInterop.Setup<string>("readTextFromClipboard")
+                .SetResult(outputText);
+
+            // when
+            var actualText = await clipboardService.ReadTextFromClipboard();
+
+            // Then
+            actualText.Should().Be(expectedText);
         }
     }
 }
