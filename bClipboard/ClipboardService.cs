@@ -6,13 +6,8 @@ using Microsoft.JSInterop;
 
 namespace bClipboard
 {
-    internal class ClipboardService(IJSRuntime jsRuntime) : IClipboardService, IAsyncDisposable
+    internal partial class ClipboardService
     {
-        private readonly Lazy<Task<IJSObjectReference>> moduleTask =
-            new(() => jsRuntime.InvokeAsync<IJSObjectReference>(
-                identifier: "import",
-                args: "./_content/bClipboard/bclipboard.js").AsTask());
-
         public async ValueTask CopyTextToClipboard(string text)
         {
             var module = await moduleTask.Value;
