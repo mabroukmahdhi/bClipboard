@@ -1,13 +1,15 @@
-# bClipboard
-
-bClipboard is a Blazor library that simplifies clipboard operations for Blazor applications. It provides methods to copy text to and read text from the clipboard using JavaScript interop.
-
 <p align="center">
   <img  src="https://github.com/mabroukmahdhi/bClipboard/blob/main/clipboard.png">
 </p>
 
 
+# bClipboard
+
+bClipboard is a Blazor library that simplifies clipboard operations for Blazor applications. It provides methods to copy text to and read text from the clipboard using JavaScript interop.
+
 [![Nuget](https://img.shields.io/nuget/v/bClipboard)](https://www.nuget.org/packages/bClipboard/)
+[![Nuget](https://img.shields.io/nuget/dt/bClipboard)](https://www.nuget.org/packages/bClipboard/)
+[![GitHub](https://img.shields.io/github/license/mabroukmahdhi/bClipboard)](
 
 ## Features
 
