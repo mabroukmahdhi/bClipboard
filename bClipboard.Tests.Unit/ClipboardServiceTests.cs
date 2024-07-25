@@ -4,7 +4,6 @@
 
 using bClipboard.Extensions;
 using Bunit;
-using Microsoft.Extensions.DependencyInjection;
 using Tynamix.ObjectFiller;
 
 namespace bClipboard.Tests.Unit
