@@ -6,7 +6,7 @@ using Microsoft.JSInterop;
 
 namespace bClipboard
 {
-    public class ClipboardService(IJSRuntime jsRuntime) : IClipboardService, IAsyncDisposable
+    internal class ClipboardService(IJSRuntime jsRuntime) : IClipboardService, IAsyncDisposable
     {
         private readonly Lazy<Task<IJSObjectReference>> moduleTask =
             new(() => jsRuntime.InvokeAsync<IJSObjectReference>(
