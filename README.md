@@ -9,7 +9,7 @@ bClipboard is a Blazor library that simplifies clipboard operations for Blazor a
 
 [![Nuget](https://img.shields.io/nuget/v/bClipboard)](https://www.nuget.org/packages/bClipboard/)
 [![Nuget](https://img.shields.io/nuget/dt/bClipboard)](https://www.nuget.org/packages/bClipboard/)
-[![GitHub](https://img.shields.io/github/license/mabroukmahdhi/bClipboard)](
+![GitHub](https://img.shields.io/github/license/mabroukmahdhi/bClipboard)
 
 ## Features
 
