@@ -14,9 +14,7 @@ bClipboard is a Blazor library that simplifies clipboard operations for Blazor a
 ## Features
 
 - **Copy to Clipboard**: Easily copy text to the clipboard.
-- **Read from Clipboard**: Read text from the clipboard.
-- **Blazor Integration**: Seamlessly integrate with Blazor applications.
-- **JavaScript Interop**: Utilizes JavaScript interop for clipboard operations.
+- **Read from Clipboard**: Read text from the clipboard. 
 
 ## Installation
 
