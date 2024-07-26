@@ -31,10 +31,8 @@ dotnet add package bClipboard
 In your `Program.cs` file, register the `ClipboardService` with the dependency injection container.
 
 ```csharp
-using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-using Microsoft.Extensions.DependencyInjection;
-using bClipboard;
-using System.Threading.Tasks;
+[...]
+using bClipboard.Extensions;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
